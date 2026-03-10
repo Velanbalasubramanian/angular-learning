@@ -1,0 +1,31 @@
+<div style="font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px;">
+  <h1>Angular Lifecycle Hooks Demonstration</h1>
+
+  <div style="margin-bottom: 20px; display: flex; gap: 10px;">
+    <button (click)="toggleDemo()"
+      style="padding: 10px 20px; cursor: pointer; background-color: #6c757d; color: white; border: none; border-radius: 4px;">
+      {{ showDemo() ? 'Destroy' : 'Create' }} Component
+    </button>
+    <button (click)="updateData()" [disabled]="!showDemo()"
+      style="padding: 10px 20px; cursor: pointer; background-color: #007bff; color: white; border: none; border-radius: 4px;">
+      Update Input Data
+    </button>
+  </div>
+
+  <div *ngIf="showDemo()"
+    style="background-color: #f8f9fa; border: 1px solid #dee2e6; border-radius: 8px; padding: 1px;">
+    <app-lifecycle-demo [data]="demoData()"></app-lifecycle-demo>
+  </div>
+
+  <div style="margin-top: 40px; padding: 15px; background-color: #e9ecef; border-radius: 8px;">
+    <h3>Instruction:</h3>
+    <ol>
+      <li>Open your browser's Developer Tools (F12) and go to the <strong>Console</strong> tab.</li>
+      <li>Click <strong>Destroy Component</strong> to see <code>ngOnDestroy</code>.</li>
+      <li>Click <strong>Create Component</strong> to see the full creation sequence.</li>
+      <li>Click <strong>Update Input Data</strong> to see the update sequence.</li>
+    </ol>
+  </div>
+
+  <router-outlet></router-outlet>
+</div>
