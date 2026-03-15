@@ -1,12 +1,12 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet, RouterLink } from '@angular/router';
 import { LifecycleDemoComponent } from './lifecycle-demo/lifecycle-demo.component';
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, LifecycleDemoComponent, CommonModule],
+  imports: [RouterOutlet, RouterLink, LifecycleDemoComponent, CommonModule],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
