@@ -39,5 +39,15 @@ export class DataBinding implements OnInit {
 
   // Propery Binding With safe navigation operator
   User:any = null;
- 
+
+  // Event Binding
+  count = 0;
+  clickMe() {
+    this.count++;
+  }
+  clickMeDecrement() {
+    if (this.count > 0) {
+      this.count--;
+    }
+  }
 }

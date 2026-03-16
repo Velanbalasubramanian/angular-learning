@@ -1,31 +1,37 @@
- <!-- Oneway Data Binding -->
-  <!-- String INterpolition {{}} -->
-   <h1>Oneway Data Binding</h1>
+<!-- Oneway Data Binding -->
+<!-- String INterpolition {{}} -->
+<h1>Oneway Data Binding</h1>
 <img src="{{imgurl}}" alt="{{imgalt}}" title="{{imgalt}}">
 <h3>{{title}}</h3>
 
-<hr> 
- <!-- Twoway Data Binding -->
-  <h1>Twoway Data Binding</h1>
-  <input type="text" [(ngModel)]="fullName">
+<hr>
+<!-- Twoway Data Binding -->
+<h1>Twoway Data Binding</h1>
+<input type="text" [(ngModel)]="fullName">
 <h3>{{fullName}}</h3>
 
 <hr>
 
 <!-- Function with data binding -->
- <h1>Function with data binding</h1>
- <h3>{{getName()}}</h3>
+<h1>Function with data binding</h1>
+<h3>{{getName()}}</h3>
 
- <hr>
+<hr>
 
- <!-- attribute data binding -->
- <h1>Attribute data binding</h1>
-  <img [src]="imgurl" [alt]="imgalt" [title]="imgalt">
+<!-- attribute data binding -->
+<h1>Attribute data binding</h1>
+<img [src]="imgurl" [alt]="imgalt" [title]="imgalt">
 
-  <!-- Property Binding -->
-   <h1>Property Binding</h1>
-   <h3 [innerHTML]="propertyBinding"></h3>
+<!-- Property Binding -->
+<h1>Property Binding</h1>
+<h3 [innerHTML]="propertyBinding"></h3>
 
-   <!-- Propery Binding With safe navigation operator (ithunala error varathu kammiyagum ?. ) --> 
-   <h1>Propery binding With safe navigation operator</h1>
-   <p [textContent]="User?.name"></p>
+<!-- Propery Binding With safe navigation operator (ithunala error varathu kammiyagum ?. ) -->
+<h1>Propery binding With safe navigation operator</h1>
+<p [textContent]="User?.name"></p>
+
+<!-- Event Binding -->
+<h1>Event Binding</h1>
+<button (click)="clickMe()">Click - Increment</button>
+<button (click)="clickMeDecrement()">Click - Decrement</button>
+<h3>Count {{count}}</h3>
