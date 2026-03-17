@@ -1,0 +1,120 @@
+<section class="routing-container">
+    <header class="routing-header">
+        <h1>Angular Routing <span class="badge">Concepts</span></h1>
+        <p>Efficiently navigate between different components in a Single Page Application (SPA).</p>
+    </header>
+
+    <section class="routing-section" id="routing">
+        <div class="section-icon">1️⃣</div>
+        <div class="section-content">
+            <h2>Routing</h2>
+            <p>Routing in Angular enables navigation between different components using URLs without page reloads. This
+                is the core mechanism for creating SPAs.</p>
+            <div class="example-box">
+                <h3>Example URL Mapping</h3>
+                <ul>
+                    <li><code>/home</code> → <strong>HomeComponent</strong></li>
+                    <li><code>/about</code> → <strong>AboutComponent</strong></li>
+                    <li><code>/contact</code> → <strong>ContactComponent</strong></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="routing-section" id="route">
+        <div class="section-icon">2️⃣</div>
+        <div class="section-content">
+            <h2>Route</h2>
+            <p>A Route defines the connection between a URL path and a component.</p>
+            <pre><code>{{ routeConfigCode }}</code></pre>
+            <div class="path-details">
+                <p><strong>path:</strong> The URL segment.</p>
+                <p><strong>component:</strong> The component to be displayed.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="routing-section" id="router-outlet">
+        <div class="section-icon">3️⃣</div>
+        <div class="section-content">
+            <h2>Router Outlet</h2>
+            <p><code>&lt;router-outlet&gt;</code> is the placeholder where Angular dynamically loads the routed
+                component.</p>
+            <div class="code-snippet">
+                <code>{{ routerOutletCode }}</code>
+            </div>
+        </div>
+    </section>
+
+    <section class="routing-section" id="activated-route">
+        <div class="section-icon">4️⃣</div>
+        <div class="section-content">
+            <h2>ActivatedRoute</h2>
+            <p>Used to access information about the current route, such as parameters, query parameters, and data.</p>
+            <div class="example-grid">
+                <div class="config-card">
+                    <h4>Config</h4>
+                    <code>{{ productConfigCode }}</code>
+                </div>
+                <div class="url-card">
+                    <h4>URL</h4>
+                    <code>{{ productUrlCode }}</code>
+                </div>
+            </div>
+            <pre><code>{{ activatedRouteCode }}</code></pre>
+        </div>
+    </section>
+
+    <section class="routing-section" id="router-service">
+        <div class="section-icon">5️⃣</div>
+        <div class="section-content">
+            <h2>Router Service</h2>
+            <p>Navigate programmatically between routes using the <code>Router</code> service.</p>
+
+            <div class="method-split">
+                <div class="method-card">
+                    <h4>navigateByUrl()</h4>
+                    <p>Uses a URL string.</p>
+                    <pre><code>{{ navigateByUrlCode }}</code></pre>
+                </div>
+                <div class="method-card">
+                    <h4>navigate()</h4>
+                    <p>Uses an array format, ideal for parameters.</p>
+                    <pre><code>{{ navigateCode }}</code></pre>
+                </div>
+            </div>
+
+            <table class="routing-table">
+                <thead>
+                    <tr>
+                        <th>Method</th>
+                        <th>Usage</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>navigateByUrl()</code></td>
+                        <td>URL String</td>
+                        <td><code>'/home'</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>navigate()</code></td>
+                        <td>Array with Params</td>
+                        <td><code>['product', 10]</code></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <footer class="routing-summary">
+        <h3>✅ Summary</h3>
+        <ul>
+            <li><strong>Routing:</strong> Navigation via URLs.</li>
+            <li><strong>Route:</strong> URL to Component mapping.</li>
+            <li><strong>ActivatedRoute:</strong> Information about current route.</li>
+            <li><strong>Router:</strong> Programmatic navigation.</li>
+        </ul>
+    </footer>
+</section>

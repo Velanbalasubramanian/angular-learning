@@ -1,0 +1,19 @@
+<div class="practice-container">
+    <div class="tab-header">
+        <button [class.active]="activeTab === 'data-binding'" (click)="activeTab = 'data-binding'">
+            Data Binding
+        </button>
+        <button [class.active]="activeTab === 'routing'" (click)="activeTab = 'routing'">
+            Routing Concepts
+        </button>
+    </div>
+
+    <div class="tab-content" [ngSwitch]="activeTab">
+        <div *ngSwitchCase="'data-binding'">
+            <app-data-binding></app-data-binding>
+        </div>
+        <div *ngSwitchCase="'routing'">
+            <app-routing-concepts></app-routing-concepts>
+        </div>
+    </div>
+</div>
