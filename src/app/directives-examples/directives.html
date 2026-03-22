@@ -1,0 +1,64 @@
+<h1>Directives</h1>
+<p>Three types of directives</p>
+<ol>
+    <li>Component</li>
+    <li>Structural</li>
+    <li>Attributes</li>
+</ol>
+
+<h2>Structural Directives</h2>
+<h3>ngFor Example</h3>
+<ul>
+    <li *ngFor="let movie of movies;">{{movie}}</li>
+</ul>
+
+<h3>ngFor Variables</h3>
+<!-- Index -->
+<h4>Index </h4>
+<ul>
+    <li *ngFor="let fruit of fruits; let i = index;">{{i + 1}}. {{fruit}}</li>
+</ul>
+
+<!-- First and Last Variables -->
+<h4>First and Last Variables</h4>
+<ul>
+    <li *ngFor="let fruit of fruits; let isFirst = first; let isLast = last;">
+        <strong *ngIf="isFirst">First:</strong>
+        <strong *ngIf="isLast">Last:</strong>
+        {{fruit}}
+    </li>
+</ul>
+
+<!-- Even and Odd Variables -->
+<h4>Even and Odd Variables</h4>
+<ul>
+    <li *ngFor="let fruit of fruits; let isEven = even; let isOdd = odd;"
+        [ngClass]="{'even-item': isEven, 'odd-item': isOdd}">
+        <strong *ngIf="isEven">Even:</strong>
+        <strong *ngIf="isOdd">Odd:</strong>
+        {{fruit}}
+    </li>
+</ul>
+
+<h3>ngIf Example</h3>
+<input type="checkbox" [(ngModel)]="showMe">
+<p *ngIf="showMe">Can you see me?</p>
+
+<hr>
+
+<h2 [ngStyle]="{'color': '#008000'}">Attribute Directives</h2>
+<h3>ngClass Examples</h3>
+<p [ngClass]="['primary', 'big']">Sample Text - Normal class name use (Color and Font size)</p>
+
+<!-- Conditional Based -->
+<span>Apply Red </span><input type="checkbox" [(ngModel)]="applyRed">
+<p [ngClass]="{'primary':applyRed}">Sample Text - Conditional Based</p>
+
+<h3>ngStyle Examples</h3>
+<p [ngStyle]="{'color':'red','font-size':'40px'}">Sample Test - ngStyle Examples</p>
+
+
+<h2>Custom Directives</h2>
+<h3>Highlight Directive</h3>
+<p [appHighlight]="'yellow'">Hover over me to see the highlight effect</p>
+<p [appHighlight]="'red'">This text will highlight in red color</p>

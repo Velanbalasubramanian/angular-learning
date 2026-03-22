@@ -1,0 +1,14 @@
+.even-item {
+    color: green;
+}
+
+.odd-item {
+    color: red;
+}
+
+.primary {
+    color: red;   
+}
+.big {
+    font-size: 40px;
+}

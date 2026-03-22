@@ -1,0 +1,27 @@
+<h1>Component LifeCycle Hooks</h1>
+<ul>
+    <li>ngOnChanges</li>
+    <li>ngOnInit</li>
+    <li>ngDoCheck</li>
+    <li>ngAfterContentInit</li>
+    <li>ngViewInit</li>
+    <li>ngAfterViewChecked</li>
+    <li>ngOnDestroy</li>
+</ul>
+
+<!-- ngOnChange method -->
+<h2>ngOnChanges</h2>
+<input type="text" name="title" [(ngModel)]="title">
+<app-child [items]="itemList" [title]="title"></app-child>
+
+<hr>
+
+<!-- ngOnInit method -->
+<h2>ngOnInit</h2>
+<p>Message: {{message}}</p>
+
+<!-- ngDoCheck method -->
+<h2>ngDoCheck</h2>
+<p>Message: {{message}}</p>
+<input type="text" name="title" [(ngModel)]="title">
+<button (click)="updateMessage()">Update Message</button>

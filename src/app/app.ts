@@ -1,12 +1,12 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet, RouterLink } from '@angular/router';
-import { LifecycleDemoComponent } from './lifecycle-demo/lifecycle-demo.component';
+import { LifecycleHooksExample } from './lifecycle-hooks-example/lifecycle-hooks-example';
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, RouterLink, LifecycleDemoComponent, CommonModule],
+  imports: [RouterOutlet, RouterLink, LifecycleHooksExample, CommonModule],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
