@@ -25,3 +25,20 @@
 <p>Message: {{message}}</p>
 <input type="text" name="title" [(ngModel)]="title">
 <button (click)="updateMessage()">Update Message</button>
+
+<!-- ngAfterContentInit method -->
+<h2>ngAfterContentInit Hook</h2>
+
+<!-- @if(showHello) intha line mattum OnDestroy use panniruku -->
+@if(showHello) {
+    <app-child>
+        <p #messageContent>Hello Angular</p>
+        <p #messageContent>This is a simple example</p>
+    </app-child>
+}
+
+<!-- ngAfterViewInit method -->
+<!-- <app-child></app-child> -->
+
+<!-- ngDestroy method -->
+<strong>showHello</strong> <input type="checkbox" [(ngModel)]="showHello">

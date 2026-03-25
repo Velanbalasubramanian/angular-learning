@@ -1,4 +1,4 @@
-import { Component, DoCheck, OnInit } from '@angular/core';
+import { AfterContentInit, Component, ContentChildren, DoCheck, ElementRef, OnInit, QueryList } from '@angular/core';
 import { Child } from './components/child/child';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './lifecycle-hooks-example.html',
   styleUrl: './lifecycle-hooks-example.css',
 })
-export class LifecycleHooksExample implements OnInit, DoCheck {
+export class LifecycleHooksExample implements OnInit, DoCheck, AfterContentInit {
   itemList = [
     { id: 1, name: 'Apple' },
     { id: 2, name: 'Banana' },
@@ -41,4 +41,15 @@ export class LifecycleHooksExample implements OnInit, DoCheck {
       this.prevMessage = this.message;
     }
   }
+
+  // ngAfterContentInit method
+  @ContentChildren('messageContent') messageElements!: QueryList<ElementRef>;
+  ngAfterContentInit(): void {
+    this.messageElements.forEach(element => {
+      console.log('projected content', element.nativeElement.textContent)
+    })
+  }
+
+  // ngDestroy method
+  showHello = true;
 }
