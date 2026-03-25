@@ -7,6 +7,7 @@ import { Directives } from './directives-examples/directives';
 import { PipeExamples } from './pipe-examples/pipe-examples';
 import { SharingDataComponent } from './sharing-data-btw-component/sharing-data-component';
 import { LifecycleHooksExample } from './lifecycle-hooks-example/lifecycle-hooks-example';
+import { HttpClientPratice } from './http-client-pratice/http-client-pratice';
 
 export const routes: Routes = [
     { path: 'data-binding', component: DataBinding },
@@ -16,5 +17,6 @@ export const routes: Routes = [
     { path: 'directives', component: Directives },
     { path: 'pipe-examples', component: PipeExamples },
     { path: 'sharing-data', component: SharingDataComponent },
-    { path: 'lifecycle-demo', component: LifecycleHooksExample }
+    { path: 'lifecycle-demo', component: LifecycleHooksExample },
+    { path: 'http-client-practice', component: HttpClientPratice }
 ];
